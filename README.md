@@ -18,6 +18,6 @@
 * платежные данные клиентов
 * настройки внутренней инфраструктуры и политик безопасности
 
-[Mindmap безопасности данных](Task1/mindmap.drawio)
+[Mindmap безопасности данных](task1/mindmap.drawio)
 
-![Mindmap безопасности данных](Task1/mindmap.jpg)
+![Mindmap безопасности данных](task1/mindmap.jpg)
