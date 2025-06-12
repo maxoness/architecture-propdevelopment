@@ -21,3 +21,5 @@
 [Mindmap безопасности данных](task1/mindmap.drawio)
 
 ![Mindmap безопасности данных](task1/mindmap.jpg)
+# Task 2
+см task2/IB.md
