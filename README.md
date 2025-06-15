@@ -22,4 +22,18 @@
 
 ![Mindmap безопасности данных](task1/mindmap.jpg)
 # Task 2
-см task2/IB.md
+см. [здесь](task2/IB.md)
+# Task 3
+## Диаграмма контекста в модели С4
+[Диаграмма контекста в модели С4](task3/PropDevelopment_С4_model_context.drawio)
+
+![Диаграмма контекста в модели С4](task3/PropDevelopment_С4_model_context.jpg)
+
+## Диаграмма контейнеров PropDevelopment
+
+[Диаграмма контейнеров PropDevelopment](task3/PropDevelopment_С4_model_container.drawio)
+
+![Диаграмма контейнеров PropDevelopment](task3/PropDevelopment_С4_model_container.jpg)
+
+## Cписок требований, которым должны удовлетворить внешние интеграции
+см. [здесь](task3/requirements.md)
