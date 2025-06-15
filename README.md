@@ -37,3 +37,50 @@
 
 ## Cписок требований, которым должны удовлетворить внешние интеграции
 см. [здесь](task3/requirements.md)
+
+# Task 4
+## Роли и их полномочия при работе с Kubernetes
+см. [здесь](task4/roles.md)
+
+## Cкрипт для создания пользователей
+см. [здесь](task4/users.sh)
+
+```shell
+bash ./task4/users.sh
+```
+результат
+```shell
+kubectl config get-users
+```
+![kubectl config get-users](task4/users.jpg)
+## Cкрипт для создания ролей
+манифест для создания ролей см. [здесь](task4/roles.yaml)
+
+```shell
+bash ./task4/roles.sh
+```
+результат
+```shell
+kubectl describe roles
+```
+![kubectl describe roles](task4/roles.jpg)
+```shell
+kubectl describe clusterroles secrets-reader
+```
+![describe clusterroles secrets-reader](task4/clusterroles.jpg)
+## Cкрипт для связи ролей с пользователями
+манифест для связи ролей с пользователями см. [здесь](task4/rolebinding.yaml)
+```shell
+bash ./task4/rolebinding.sh
+```
+результат
+```shell
+kubectl describe rolebinding
+```
+![kubectl describe rolebinding](task4/rolebinding.jpg)
+```shell
+kubectl describe clusterrolebinding read-secrets
+```
+![kubectl describe clusterrolebinding read-secrets](task4/clusterrolebinding.jpg)
+
+# Task 5
