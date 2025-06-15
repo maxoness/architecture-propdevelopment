@@ -84,3 +84,26 @@ kubectl describe clusterrolebinding read-secrets
 ![kubectl describe clusterrolebinding read-secrets](task4/clusterrolebinding.jpg)
 
 # Task 5
+## Создать сетевые политики
+Файл с сетевыми политиками см. [здесь](task4/rolebinding.yaml) 
+## Запустить сервисы
+```shell
+kubectl run front-end-app --image=nginx --labels role=front-end --expose --port 80
+kubectl run back-end-api-app --image=nginx --labels role=back-end-api --expose --port 80
+kubectl run admin-front-end-app --image=nginx --labels role=admin-front-end --expose --port 80
+kubectl run admin-back-end-api-app --image=nginx --labels role=admin-back-end-api --expose --port 80
+```
+## Применить политики
+```shell
+kubectl apply -f ./task5/non-admin-api-allow.yaml
+```
+## Проверить запрещенный трафик
+```shell
+kubectl run test-1 --rm -i -t --image=alpine -- wget -qO- --timeout=2 http://back-end-api-app
+```
+## Проверить разрешенный трафик
+```shell
+kubectl exec -it front-end-app -- curl http://back-end-api-app
+```
+## Результат
+![проверка траффика](task5/check_traffic.jpg)
